@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function AleAdd(){
   const aleFormStyles = {
@@ -47,6 +48,7 @@ function AleAdd(){
     placeholder='Beverage Description'/>
     <button type='submit'>Submit!</button>
       </form>
+      <Link to="/aleEdit">Update your contribution!</Link>
     </div>
   );
 }
