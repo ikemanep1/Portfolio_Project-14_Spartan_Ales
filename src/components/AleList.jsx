@@ -50,8 +50,21 @@ const aleTotal = [
 ];
 
 function AleList(){
+  const aleIntro = {
+    width: "80%",
+    backgroundColor: "#660000",
+    padding: "20px",
+    display: "flex",
+    justifyContent: "center",
+    marginTop: "20px",
+    marginLeft: "10%",
+    border: "3px solid #ff751a",
+    textAlign: "center",
+    color: "#ffedcc",
+  }
   return (
        <div>
+         <p style={aleIntro}>Greetings! Welcome to Spartan Ale, one of the world's top rated Hellenic alcohol distrubutors. We sell all kinds of luxurious beverages. Whether you're out to try something new, or have an event to cater, we got you covered! Below is a list of some of our most featured items. Pick your poison!</p>
          {aleTotal.map((ale, index) =>
            <Ale name={ale.name}
              type={ale.type}

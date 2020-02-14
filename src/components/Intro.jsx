@@ -7,9 +7,8 @@ function Intro(){
     backgroundPosition: "top",
     backgroundRepeat: "no-repeat",
     marginBottom: "32px",
-    margin: "10%",
+    margin: "5%",
     textAlign: "center",
-    border: "3px solid #ff751a",
     fontFamily: "fantasy",
     color: "#e65c00",
     fontSize:"35px"
