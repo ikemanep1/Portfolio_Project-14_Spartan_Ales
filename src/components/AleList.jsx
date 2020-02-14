@@ -46,7 +46,7 @@ const aleTotal = [
    cost: "$6.50",
    alcohol_content: "200 proof",
    quote: "Used primarily for treating wounds in battle, to even stand after downing this sickly brew is to withstand the fury of the gods themselves."
- },
+ }
 ];
 
 function AleList(){
