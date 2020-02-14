@@ -1,5 +1,6 @@
 import React from 'react';
 import Nav from './components/Nav';
+import Intro from './components/Intro';
 import Ale from './components/Ale';
 import AleAdd from './components/AleAdd';
 import AleList from './components/AleList';
@@ -18,8 +19,11 @@ function App() {
 
     <div className="App">
     <header className="App-header">
-    <Nav />
+    <Nav/>
     </header>
+    <div>
+    <Intro/>
+    </div>
     <div>
     <AleList/>
     </div>
