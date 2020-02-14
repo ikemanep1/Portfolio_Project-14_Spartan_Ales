@@ -31,8 +31,7 @@ function Nav(){
       <table className="nav-links">
            <Link to="/" style={navButtons}>Home</Link>
            <Link to="/aleadd" style={navButtons}>Add a drink!</Link>
-           <Link to="/events" style={navButtons}>Upcoming events</Link>
-          <Link to="/about" style={navButtons}>About us!</Link>
+           <Link to="/reviewlist" style={navButtons}>About us!</Link>
       </table>
       <p> </p>
       <input style={navSearchStyles} type='text' placeholder='Search' />

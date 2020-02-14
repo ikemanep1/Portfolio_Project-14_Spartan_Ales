@@ -100,7 +100,7 @@ function AleList(){
              key={index}/>
          )}
          <div style={aleIntro}>
-         <p>Returning customer? Feel free to leave a<Link to="/review" style={navButtons}>review.</Link> Your experience matters to us.</p>
+         <p>Returning customer? Feel free to leave a<Link to="/reviewadd" style={navButtons}>review.</Link> Your experience matters to us.</p>
          </div>
        </div>
      );

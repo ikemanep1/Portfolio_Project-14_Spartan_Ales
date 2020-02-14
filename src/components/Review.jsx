@@ -14,7 +14,7 @@ function Review(props){
     color: "#ffedcc",
   }
   return (
-    <div style={review}>
+    <div>
       <p>{props.name} had this to say:</p>
       <ul>
       <li>rating: {props.rating}</li>

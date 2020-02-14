@@ -39,6 +39,7 @@ function App() {
     <Route path='/aleedit' component={AleEdit} />
     <Route path='/reviewadd' component={ReviewAdd} />
     <Route path='/reviewedit' component={ReviewEdit} />
+    <Route path='/reviewlist' component={ReviewList} />
     <Route component={Error404} />
     </Switch>
     </div>

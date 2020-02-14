@@ -20,8 +20,19 @@ const reviewList = [
 ];
 
 function ReviewList(){
+  const review = {
+    width: "60%",
+    backgroundColor: "#4e504d",
+    padding: "20px",
+    justifyContent: "center",
+    marginLeft: "20%",
+    marginRight: "20%",
+    marginTop: "10px",
+    border: "3px solid #ff751a",
+    color: "#ffedcc",
+  }
   return (
-       <div>
+       <div style={review}>
          {reviewList.map((review, index) =>
            <Review name={review.name}
              rating={review.rating}
