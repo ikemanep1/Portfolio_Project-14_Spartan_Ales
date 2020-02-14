@@ -16,7 +16,10 @@ Ale.propTypes = {
   name: PropTypes.string,
   type: PropTypes.string,
   process: PropTypes.string,
-  alcohol_content: PropTypes.string
+  serving_size: PropTypes.string,
+  cost: PropTypes.string,
+  alcohol_content: PropTypes.string,
+  quote: PropTypes.string
 };
 
 
