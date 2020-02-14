@@ -18,7 +18,7 @@ const aleTotal = [
    serving_size: "5 oz",
    cost: "$9.00",
    alcohol_content: "11 proof",
-   quote: "Vinified at the legendary Moraitis Winery in Greece, this luxurious wine is the very essence of satisfaction."
+   quote: "Vinified at the legendary Moraitis Winery in Greece, this luxurious wine represents the very essence of satisfaction."
  },
  {
    name: "Cyclops in a Cup",

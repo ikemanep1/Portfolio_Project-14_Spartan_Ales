@@ -3,19 +3,19 @@ import Review from "./Review"
 
 const reviewList = [
  {
-   name: "Agafya Battleborn",
+   name: "Clarissa",
    rating: "4",
    content: "I tried the Frozen Gladius, and it was a blast!",
  },
  {
-   name: "Cadmus Falconhearted",
+   name: "Steve",
    rating: "5",
    content: "The wine is quite stellar!",
  },
  {
-   name: "Callidora Nyx-walker",
-   rating: "3",
-   content: "The Aegean Everclear wasn't to my liking.",
+   name: "Sandra",
+   rating: "2",
+   content: "The Aegean Everclear was not to my liking.",
  }
 ];
 

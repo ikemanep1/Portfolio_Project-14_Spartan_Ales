@@ -8,25 +8,32 @@ import Review from './components/Review';
 import ReviewAdd from './components/ReviewAdd';
 import ReviewList from './components/ReviewList';
 import ReviewEdit from './components/ReviewEdit';
-import Error404 from './Error404';
+import Error404 from './components/Error404';
 import { Switch, Route } from 'react-router-dom';
 
 import './App.css';
 
 function App() {
+  var appStyle = {
+        
+      }
   return (
 
-    <div className="App">
+    <div className="App" style={appStyle}>
     <header className="App-header">
     <Nav />
     </header>
+    <div>
+    <AleList/>
+    </div>
+    <div>
+    <ReviewList/>
+    </div>
     <Switch>
     <Route exact path='/' component={Ale} />
     <Route path='/aleadd' component={AleAdd} />
-    <Route path='/alelist' component={AleList} />
     <Route path='/aleedit' component={AleEdit} />
     <Route path='/reviewadd' component={ReviewAdd} />
-    <Route path='/reviewlist' component={ReviewList} />
     <Route path='/reviewedit' component={ReviewEdit} />
     <Route component={Error404} />
     </Switch>
