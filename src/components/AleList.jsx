@@ -1,5 +1,6 @@
 import React from "react";
 import Ale from "./Ale"
+import { Link } from 'react-router-dom';
 
 const aleTotal = [
  {
@@ -61,6 +62,7 @@ function AleList(){
     border: "3px solid #ff751a",
     textAlign: "center",
     color: "#ffedcc",
+    marginBottom: "20px"
   }
   const introStyles = {
     backgroundImage: "url('Polis.jpg')",
@@ -73,6 +75,13 @@ function AleList(){
     fontFamily: "fantasy",
     color: "#e65c00",
     fontSize:"35px"
+  }
+  const navButtons = {
+    height: "25px",
+    marginLeft: "10px",
+    color: "#ff8533",
+    padding: "5px;",
+    textDecoration: 'none'
   }
   return (
        <div>
@@ -90,7 +99,9 @@ function AleList(){
              quote={ale.quote}
              key={index}/>
          )}
-          <p style={aleIntro}>Returning customer? Feel free to leave a review! Your experience matters to us.</p>
+         <div style={aleIntro}>
+         <p>Returning customer? Feel free to leave a<Link to="/review" style={navButtons}>review.</Link> Your experience matters to us.</p>
+         </div>
        </div>
      );
 }
