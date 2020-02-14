@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from 'react-router-dom';
+
 
 function Nav(){
   const navStyles = {
@@ -18,18 +20,19 @@ function Nav(){
   }
   const navButtons = {
     height: "25px",
-    borderRadius: "5px",
     marginLeft: "10px",
     backgroundColor: "black",
-    color: "#ff8533"
+    color: "#ff8533",
+    padding: "5px;",
+    textDecoration: 'none'
   }
   return (
     <div className="nav" style={navStyles}>
       <table className="nav-links">
-          <button style={navButtons}>Add a drink!</button>
-          <button style={navButtons}>About us!</button>
-          <button style={navButtons}>Upcoming Events!</button>
-          <button style={navButtons}>Add a review!</button>
+           <Link to="/" style={navButtons}>Home</Link>
+           <Link to="/aleadd" style={navButtons}>Add a drink!</Link>
+           <Link to="/events" style={navButtons}>Upcoming events</Link>
+          <Link to="/about" style={navButtons}>About us!</Link>
       </table>
       <p> </p>
       <input style={navSearchStyles} type='text' placeholder='Search' />

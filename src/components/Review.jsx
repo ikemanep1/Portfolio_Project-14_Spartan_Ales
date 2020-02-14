@@ -3,18 +3,15 @@ import PropTypes from "prop-types";
 
 function Review(props){
   const review = {
-    height: "500px",
-      backgroundAttachment: "fixed",
-      backgroundPosition: "top",
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "contain",
-      padding: "32px 0px",
-      marginBottom: "32px",
-      display: "flex",
-      justifyContent: "center",
-      flexDirection: "column",
-      color: "#ffdb4d",
-      textAlign: "center"
+    width: "60%",
+    backgroundColor: "#4e504d",
+    padding: "20px",
+    justifyContent: "center",
+    marginLeft: "20%",
+    marginRight: "20%",
+    marginTop: "10px",
+    border: "3px solid #ff751a",
+    color: "#ffedcc",
   }
   return (
     <div style={review}>

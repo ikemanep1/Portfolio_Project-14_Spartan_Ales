@@ -14,17 +14,17 @@ function Ale(props){
     border: "3px solid #ff751a",
     color: "#ffedcc",
   }
-  const aleIntro = {
-  }
   return (
     <div style={aleSingular}>
     <p>{props.name}</p>
-    <p>{props.type}</p>
-    <p>{props.process}</p>
-    <p>{props.serving_size}</p>
-    <p>{props.cost}</p>
-    <p>{props.alcohol_content}</p>
-    <p>{props.quote}</p>
+    <ul>
+    <li>{props.type}</li>
+    <li>{props.process}</li>
+    <li>{props.serving_size}</li>
+    <li>{props.cost}</li>
+    <li>{props.alcohol_content}</li>
+    <li>{props.quote}</li>
+    </ul>
   </div>
    );
 }

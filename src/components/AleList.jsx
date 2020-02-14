@@ -27,12 +27,12 @@ const aleTotal = [
    serving_size: "9 oz",
    cost: "$11.50",
    alcohol_content: "42 proof",
-   quote: "Somewhat vindictively named, this angry brew is akin to drinking a punch to the face."
+   quote: "Somewhat vindictively named, this angry brew is akin to drinking a punch in the face."
  },
  {
    name: "Aegean Everclear",
    type: "Spirit",
-   process: "distilled",
+   process: "Distilled",
    serving_size: "5 oz",
    cost: "$8.50",
    alcohol_content: "120 proof",
@@ -62,8 +62,23 @@ function AleList(){
     textAlign: "center",
     color: "#ffedcc",
   }
+  const introStyles = {
+    backgroundImage: "url('Polis.jpg')",
+    height: "500px",
+    backgroundPosition: "top",
+    backgroundRepeat: "no-repeat",
+    marginBottom: "32px",
+    margin: "5%",
+    textAlign: "center",
+    fontFamily: "fantasy",
+    color: "#e65c00",
+    fontSize:"35px"
+  }
   return (
        <div>
+       <div className="intro" style={introStyles}>
+         <h1>SPARTAN ALE</h1>
+       </div>
          <p style={aleIntro}>Greetings! Welcome to Spartan Ale, one of the world's top rated Hellenic alcohol distrubutors. We sell all kinds of luxurious beverages. Whether you're out to try something new, or have an event to cater, we got you covered! Below is a list of some of our most featured items. Pick your poison!</p>
          {aleTotal.map((ale, index) =>
            <Ale name={ale.name}
@@ -75,6 +90,7 @@ function AleList(){
              quote={ale.quote}
              key={index}/>
          )}
+          <p style={aleIntro}>Returning customer? Feel free to leave a review! Your experience matters to us.</p>
        </div>
      );
 }
