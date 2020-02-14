@@ -14,12 +14,9 @@ import { Switch, Route } from 'react-router-dom';
 import './App.css';
 
 function App() {
-  var appStyle = {
-        
-      }
   return (
 
-    <div className="App" style={appStyle}>
+    <div className="App">
     <header className="App-header">
     <Nav />
     </header>
