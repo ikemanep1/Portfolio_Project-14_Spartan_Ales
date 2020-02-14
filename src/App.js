@@ -4,6 +4,7 @@ import Ale from './components/Ale';
 import AleAdd from './components/AleAdd';
 import AleList from './components/AleList';
 import AleEdit from './components/AleEdit';
+import Review from './components/Review';
 import ReviewAdd from './components/ReviewAdd';
 import ReviewList from './components/ReviewList';
 import ReviewEdit from './components/ReviewEdit';

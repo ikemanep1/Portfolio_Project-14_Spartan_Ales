@@ -7,7 +7,10 @@ function Ale(props){
     <p>{props.name}</p>
     <p>{props.type}</p>
     <p>{props.process}</p>
+    <p>{props.serving_size}</p>
+    <p>{props.cost}</p>
     <p>{props.alcohol_content}</p>
+    <p>{props.quote}</p>
   </div>
    );
 }
