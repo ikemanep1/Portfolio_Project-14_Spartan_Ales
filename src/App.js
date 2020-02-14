@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from './components/Header';
 import Nav from './components/Nav';
 import Ale from './components/Ale';
 import AleAdd from './components/AleAdd';
@@ -15,7 +14,6 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-  <Header />
   <Nav />
   <Switch>
     <Route exact path='/' component={Ale} />

@@ -49,18 +49,21 @@ const aleTotal = [
  },
 ];
 
-function ScheduleList(){
+function AleList(){
   return (
        <div>
          {aleTotal.map((ale, index) =>
-           <Schedule day={ale.day}
-             location={ale.location}
-             hours={ale.hours}
-             booth={ale.booth}
+           <Ale name={ale.name}
+             type={ale.type}
+             process={ale.process}
+             serving_size={ale.serving_size}
+             cost={ale.cost}
+             alcohol_content={ale.alcohol_content}
+             quote={ale.quote}
              key={index}/>
          )}
        </div>
      );
 }
 
-export default ScheduleList;
+export default AleList;
