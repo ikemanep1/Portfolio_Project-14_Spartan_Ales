@@ -22,6 +22,8 @@ _This is a simple REACT application with routing._
 
 _Right now, there isn't any back end logic. It's just as pretty as it can be. The component visual can be viewed in the public folder.
 
+_![Image description](./public/component_visual.jpg)_
+
 ### Support and contact details
 
 _ike.esquivelpilloud@gmail.com_
