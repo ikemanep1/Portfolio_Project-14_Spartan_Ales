@@ -20,7 +20,7 @@ _This is a simple REACT application with routing._
 
 # specs
 
-_Right now, there isn't any back end logic. It's just as pretty as it can be. The component visual can be viewed in the public folder.
+_Right now, there isn't any back end logic. It's just as pretty as it can be._
 
 _![Image description](./public/component_visual.jpg)_
 
