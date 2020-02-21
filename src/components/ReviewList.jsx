@@ -1,25 +1,8 @@
 import React from "react";
 import Review from "./Review"
+import PropTypes from 'prop-types';
 
-const reviewList = [
- {
-   name: "Clarissa",
-   rating: "4",
-   content: "I tried the Frozen Gladius, and it was a blast!",
- },
- {
-   name: "Steve",
-   rating: "5",
-   content: "The wine is quite stellar!",
- },
- {
-   name: "Sandra",
-   rating: "2",
-   content: "The Aegean Everclear was not to my liking.",
- }
-];
-
-function ReviewList(){
+function ReviewList(props){
   const review = {
     width: "60%",
     backgroundColor: "#4e504d",
@@ -33,14 +16,19 @@ function ReviewList(){
   }
   return (
        <div style={review}>
-         {reviewList.map((review, index) =>
+         {props.reviewTotal.map((review) =>
            <Review name={review.name}
              rating={review.rating}
              content={review.content}
-             key={index}/>
+             key={review.id}/>
          )}
        </div>
      );
 }
+
+ReviewList.propTypes = {
+  reviewTotal: PropTypes.array
+};
+
 
 export default ReviewList;

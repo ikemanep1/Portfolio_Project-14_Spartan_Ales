@@ -25,9 +25,9 @@ function Review(props){
 }
 
 Review.propTypes = {
-  name: PropTypes.string,
-  rating: PropTypes.string,
-  content: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired,
+  content: PropTypes.string.isRequired,
 };
 
 
