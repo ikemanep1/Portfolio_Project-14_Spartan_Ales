@@ -26,6 +26,10 @@ function Nav(){
     padding: "5px;",
     textDecoration: 'none'
   }
+  const social = {
+    backgroundColor: "black",
+    color: "#ff8533",
+  }
   return (
     <div className="nav" style={navStyles}>
       <table className="nav-links">
@@ -33,7 +37,7 @@ function Nav(){
            <Link to="/aleadd" style={navButtons}>Add a drink!</Link>
            <Link to="/reviewlist" style={navButtons}>About us!</Link>
       </table>
-      <p> </p>
+      <a style={social} href='https://www.facebook.com/' target='_blank' rel='noopener noreferrer'><i style={social} className="fab fa-facebook"></i></a>
       <input style={navSearchStyles} type='text' placeholder='Search' />
       <button style={navButtons}>Go!</button>
     </div>
