@@ -3,11 +3,12 @@ import Nav from './components/Nav';
 import Ale from './components/Ale';
 import AleAdd from './components/AleAdd';
 import AleList from './components/AleList';
+import NewAleControl from './components/NewAleControl';
 import Error404 from './components/Error404';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import {Switch, Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Moment from 'moment';
-import {Link, withRouter} from "react-router-dom";
+import {Link} from "react-router-dom";
 import './App.css';
 
 class App extends React.Component {
@@ -60,17 +61,11 @@ class App extends React.Component {
     <Nav/>
     </header>
     <div>
-    <BrowserRouter>
     <Switch>
-      <Route exact path='/' render={() =>< AleList aleList = {
-          this.state.masterAleList
-        } />}/>
-      <Route path='/aleadd' render={() =>< AleAdd onAleCreation = {
-          this.handleAddingNewAleToList
-        } />}/>
+      <Route exact path='/' render={() =>< AleList aleList = {this.state.masterAleList} />}/>
+      <Route path='/aleadd' render={()=><NewAleControl onNewAleCreation={this.handleAddingNewAleToList} />} />
       <Route component={Error404} />
     </Switch>
-    </BrowserRouter>
     </div>
     </div>
   );
