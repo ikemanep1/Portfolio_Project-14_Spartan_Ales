@@ -3,9 +3,6 @@ import Nav from './components/Nav';
 import Ale from './components/Ale';
 import AleAdd from './components/AleAdd';
 import AleList from './components/AleList';
-import Review from './components/Review';
-import ReviewAdd from './components/ReviewAdd';
-import ReviewList from './components/ReviewList';
 import Error404 from './components/Error404';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -17,12 +14,9 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterAleList: [],
-      masterReviewList: []
+      masterAleList: []
     };
     this.handleAddingNewAleToList = this.handleAddingNewAleToList.bind(this);
-    this.handleAddingNewReviewToList = this.handleAddingNewReviewToList.bind(this);
-
   }
 
   handleAddingNewAleToList(newAle) {
@@ -33,22 +27,6 @@ class App extends React.Component {
     this.setState({masterAleList: newMasterAleList});
   }
 
-  handleAddingNewReviewToList(newReview) {
-    let newMasterReviewList = this.state.masterReviewList.slice();
-    newReview.formattedSinceBirth = (newReview.sinceBirth).fromNow(true);
-
-    newMasterReviewList.push(newReview);
-    this.setState({masterReviewList: newMasterReviewList});
-  }
-
-  // onTamaEat = (a,b,c,d) => {
-  //   let newMasterTamaList = this.state.masterTamaList.slice();
-  //   newMasterTamaList.forEach((tama) => tama.overallHealth += a);
-  //   newMasterTamaList.forEach((tama) => tama.physPain += b);
-  //   newMasterTamaList.forEach((tama) => tama.mess += c);
-  //   newMasterTamaList.forEach((tama) => tama.emoPain += d);
-  //   this.setState({masterTamaList: newMasterTamaList});
-  // }
   componentDidMount() {
     this.sinceBirthUpdateTimer = setInterval(() => this.updateBirthElapsedTime(), 1000);
   }
@@ -89,12 +67,6 @@ class App extends React.Component {
         } />}/>
       <Route path='/aleadd' render={() =>< AleAdd onAleCreation = {
           this.handleAddingNewAleToList
-        } />}/>
-      <Route path='/reviewadd' render={() =>< ReviewAdd onReviewCreation = {
-          this.handleAddingNewReviewToList
-        } />}/>
-      <Route path='/reviewlist' render={() =>< ReviewList reviewList = {
-          this.state.masterReviewList
         } />}/>
       <Route component={Error404} />
     </Switch>
