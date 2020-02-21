@@ -32,7 +32,6 @@ function ReviewAdd(){
     placeholder='Review content'/>
     <button type='submit'>Submit!</button>
       </form>
-      <Link to="/aleEdit">Changed your mind? Update your review!</Link>
     </div>
   );
 }

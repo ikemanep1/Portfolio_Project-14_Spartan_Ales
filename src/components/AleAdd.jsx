@@ -48,7 +48,6 @@ function AleAdd(){
     placeholder='Beverage Description'/>
     <button type='submit'>Submit!</button>
       </form>
-      <Link to="/aleEdit">Update your contribution!</Link>
     </div>
   );
 }
