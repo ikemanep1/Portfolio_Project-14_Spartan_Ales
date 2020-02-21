@@ -11,6 +11,7 @@ function AleAdd(props) {
   let _cost = null;
   let _content = null;
   let _quote = null;
+  let _keg = 100;
 
 
   function handleNewAleSubmission(event) {

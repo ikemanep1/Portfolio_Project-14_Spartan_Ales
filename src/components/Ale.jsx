@@ -18,12 +18,13 @@ function Ale(props){
     <div style={aleSingular}>
     <p>{props.name}</p>
     <ul>
-    <li>{props.type}</li>
-    <li>{props.process}</li>
-    <li>{props.serving_size}</li>
-    <li>{props.cost}</li>
-    <li>{props.alcohol_content}</li>
-    <li>{props.quote}</li>
+    <p>Type: {props.type}</p>
+    <p>Trait: {props.process}</p>
+    <p>Recommended serving size: {props.serving_size}</p>
+    <p>Price per unit: {props.cost}</p>
+    <p>Alcohol content: {props.alcohol_content}</p>
+    <p>"{props.quote}"</p>
+    <p>Stock: {props.keg}</p>
     </ul>
   </div>
    );

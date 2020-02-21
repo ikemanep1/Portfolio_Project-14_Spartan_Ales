@@ -50,6 +50,7 @@ function AleList(props){
              cost={ale.cost}
              alcohol_content={ale.content}
              quote={ale.quote}
+             keg={ale.keg}
              key={ale.id}/>
          )}
          <div style={aleIntro}>
