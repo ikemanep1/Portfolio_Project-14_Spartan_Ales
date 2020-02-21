@@ -1,11 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { v4 } from 'uuid';
 
 function AleAdd(props) {
-  let _names = null;
-  let _location = null;
-  let _issue = null;
+  let _name = null;
+  let _type = null;
+  let _process = null;
+  let _size = null;
+  let _cost = null;
+  let _content = null;
+  let _quote = null;
+
 
   function handleNewAleSubmission(event) {
     event.preventDefault();
@@ -16,7 +22,7 @@ function AleAdd(props) {
     _size.value = '';
     _cost.value = '';
     _content.value = '';
-    _name.value = '';
+    _quote.value = '';
   }
   const aleFormStyles = {
     width: "60%",
@@ -75,38 +81,8 @@ function AleAdd(props) {
   );
 }
 
+AleAdd.propTypes = {
+  onAleCreation: PropTypes.func
+};
+
 export default AleAdd;
-
-// import React from 'react';
-// import PropTypes from 'prop-types';
-// import { v4 } from 'uuid';
-//
-
-//   return (
-//     <div>
-//       <form onSubmit={handleNewTicketFormSubmission}>
-//         <input
-//         type='text'
-//         id='names'
-//         placeholder='Pair Names'
-//         ref={(input) => {_names = input;}}/>
-//         <input
-//         type='text'
-//         id='location'
-//         placeholder='Location'
-//         ref={(input) => {_location = input;}}/>
-//         <textarea
-//         id='issue'
-//         placeholder='Describe your issue.'
-//         ref={(textarea) => {_issue = textarea;}}/>
-//         <button type='submit'>Help!</button>
-//       </form>
-//     </div>
-//   );
-// }
-//
-// NewTicketForm.propTypes = {
-//   onNewTicketCreation: PropTypes.func
-// };
-//
-// export default NewTicketForm;

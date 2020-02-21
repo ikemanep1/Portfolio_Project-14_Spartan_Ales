@@ -1,7 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { v4 } from 'uuid';
 
-function ReviewAdd(){
+function ReviewAdd(props) {
+  let _name = null;
+  let _rating = null;
+  let _content = null;
+
+  function handleNewReviewSubmission(event) {
+    event.preventDefault();
+    props.onNewReviewCreation({name: _name.value, rating: _rating.value, content: _content.value, id: v4()});
+    _name.value = '';
+    _rating.value = '';
+    _content.value = '';
+  }
   const reviewFormStyles = {
     width: "60%",
     backgroundColor: "#4e504d",
@@ -17,23 +30,30 @@ function ReviewAdd(){
   }
   return (
     <div style={reviewFormStyles}>
-    <form>
+    <form onSubmit={handleNewReviewSubmission}>
     <input
     type='text'
     id='name'
-    placeholder='Your Name'/>
+    placeholder='Name'
+    ref={(input) => {_name = input;}}/>
     <input
     type='text'
-    id='type'
-    placeholder='Beverage Rating'/>
+    id='rating'
+    placeholder='Rating'
+    ref={(input) => {_rating = input;}}/>
     <input
     type='text'
-    id='process'
-    placeholder='Review content'/>
+    id='content'
+    placeholder='Content'
+    ref={(input) => {_content = input;}}/>
     <button type='submit'>Submit!</button>
       </form>
     </div>
   );
 }
+
+ReviewAdd.propTypes = {
+  onReviewCreation: PropTypes.func
+};
 
 export default ReviewAdd;

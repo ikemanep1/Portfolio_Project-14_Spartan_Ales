@@ -60,17 +60,9 @@ class App extends React.Component {
   // updateHealthByAging() {
   //   console.log('hi');
   // }
-  // updateBirthElapsedTime() {
-  //   this.gameOver();
-  //   console.log('yo');
-  //   let newMasterTamaList = this.state.masterTamaList.slice();
-  //   newMasterTamaList.forEach((tama) => tama.formattedSinceBirth = (tama.sinceBirth).fromNow(true));
-  //   newMasterTamaList.forEach((tama) => tama.overallHealth -= 5);
-  //   newMasterTamaList.forEach((tama) => tama.emoPain += 5);
-  //   newMasterTamaList.forEach((tama) => tama.physPain += 10);
-  //   newMasterTamaList.forEach((tama) => tama.mess += 10);
-  //   this.setState({masterTamaList: newMasterTamaList});
-  // }
+  updateBirthElapsedTime() {
+    console.log('yo');
+  }
 
   render() {
   const routeStyles = {
