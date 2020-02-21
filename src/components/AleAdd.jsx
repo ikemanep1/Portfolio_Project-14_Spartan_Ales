@@ -2,7 +2,22 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { v4 } from 'uuid';
 
-function AleAdd(){
+function AleAdd(props) {
+  let _names = null;
+  let _location = null;
+  let _issue = null;
+
+  function handleNewAleSubmission(event) {
+    event.preventDefault();
+    props.onNewAleCreation({name: _name.value, type: _type.value, process: _process.value, size: _size.value, cost: _cost.value, content: _content.value, quote: _quote.value, id: v4()});
+    _name.value = '';
+    _type.value = '';
+    _process.value = '';
+    _size.value = '';
+    _cost.value = '';
+    _content.value = '';
+    _name.value = '';
+  }
   const aleFormStyles = {
     width: "60%",
     backgroundColor: "#4e504d",
@@ -22,31 +37,38 @@ function AleAdd(){
     <input
     type='text'
     id='name'
-    placeholder='Beverage Name'/>
+    placeholder='Beverage Name'
+    ref={(input) => {_name = input;}}/>
     <input
     type='text'
     id='type'
-    placeholder='Beverage Type'/>
+    placeholder='Beverage Type'
+    ref={(input) => {_type = input;}}/>
     <input
     type='text'
     id='process'
-    placeholder='Beverage Process'/>
+    placeholder='Beverage Process'
+    ref={(input) => {_process = input;}}/>
     <input
     type='text'
-    id='serving_size'
-    placeholder='Recommended Serving Size'/>
+    id='serving size'
+    placeholder='Recommended Serving Size'
+    ref={(input) => {_size = input;}}/>
     <input
     type='text'
     id='cost'
-    placeholder='Beverage Cost'/>
+    placeholder='Beverage Cost'
+    ref={(input) => {_cost = input;}}/>
     <input
     type='text'
     id='alcohol_content'
-    placeholder='Beverage Alcohol Content'/>
+    placeholder='Beverage Alcohol Content'
+    ref={(input) => {_content = input;}}/>
     <input
     type='text'
     id='quote'
-    placeholder='Beverage Description'/>
+    placeholder='Beverage Description'
+    ref={(input) => {_quote = input;}}/>
     <button type='submit'>Submit!</button>
       </form>
     </div>
@@ -59,18 +81,6 @@ export default AleAdd;
 // import PropTypes from 'prop-types';
 // import { v4 } from 'uuid';
 //
-// function NewTicketForm(props) {
-//   let _names = null;
-//   let _location = null;
-//   let _issue = null;
-//
-//   function handleNewTicketFormSubmission(event) {
-//     event.preventDefault();
-//     props.onNewTicketCreation({names: _names.value, location: _location.value, issue: _issue.value, id: v4()});
-//     _names.value = '';
-//     _location.value = '';
-//     _issue.value = '';
-//   }
 
 //   return (
 //     <div>

@@ -41,6 +41,37 @@ class App extends React.Component {
     this.setState({masterReviewList: newMasterReviewList});
   }
 
+  // onTamaEat = (a,b,c,d) => {
+  //   let newMasterTamaList = this.state.masterTamaList.slice();
+  //   newMasterTamaList.forEach((tama) => tama.overallHealth += a);
+  //   newMasterTamaList.forEach((tama) => tama.physPain += b);
+  //   newMasterTamaList.forEach((tama) => tama.mess += c);
+  //   newMasterTamaList.forEach((tama) => tama.emoPain += d);
+  //   this.setState({masterTamaList: newMasterTamaList});
+  // }
+  componentDidMount() {
+    this.sinceBirthUpdateTimer = setInterval(() => this.updateBirthElapsedTime(), 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.sinceBirthUpdateTimer);
+  }
+
+  // updateHealthByAging() {
+  //   console.log('hi');
+  // }
+  // updateBirthElapsedTime() {
+  //   this.gameOver();
+  //   console.log('yo');
+  //   let newMasterTamaList = this.state.masterTamaList.slice();
+  //   newMasterTamaList.forEach((tama) => tama.formattedSinceBirth = (tama.sinceBirth).fromNow(true));
+  //   newMasterTamaList.forEach((tama) => tama.overallHealth -= 5);
+  //   newMasterTamaList.forEach((tama) => tama.emoPain += 5);
+  //   newMasterTamaList.forEach((tama) => tama.physPain += 10);
+  //   newMasterTamaList.forEach((tama) => tama.mess += 10);
+  //   this.setState({masterTamaList: newMasterTamaList});
+  // }
+
   render() {
   const routeStyles = {
     width: "80%",
