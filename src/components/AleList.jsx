@@ -1,5 +1,6 @@
 import React from "react";
-import Ale from "./Ale"
+import Ale from "./Ale";
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const aleTotal = [
@@ -50,7 +51,7 @@ const aleTotal = [
  }
 ];
 
-function AleList(){
+function AleList(props){
   const aleIntro = {
     width: "80%",
     backgroundColor: "#660000",
@@ -89,7 +90,7 @@ function AleList(){
          <h1>SPARTAN ALE</h1>
        </div>
          <p style={aleIntro}>Greetings! Welcome to Spartan Ale, one of the world's top rated Hellenic alcohol distrubutors. We sell all kinds of luxurious beverages. Whether you're out to try something new, or have an event to cater, we got you covered! Below is a list of some of our most featured items. Pick your poison!</p>
-         {aleTotal.map((ale, index) =>
+         {props.aleTotal.map((ale) =>
            <Ale name={ale.name}
              type={ale.type}
              process={ale.process}
@@ -97,7 +98,7 @@ function AleList(){
              cost={ale.cost}
              alcohol_content={ale.alcohol_content}
              quote={ale.quote}
-             key={index}/>
+             key={ale.id}/>
          )}
          <div style={aleIntro}>
          <p>Returning customer? Feel free to leave a review. Your experience matters to us.</p>
@@ -105,5 +106,9 @@ function AleList(){
        </div>
      );
 }
+
+AleList.propTypes = {
+  aleTotal: PropTypes.array
+};
 
 export default AleList;

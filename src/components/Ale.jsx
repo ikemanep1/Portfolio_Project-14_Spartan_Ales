@@ -30,13 +30,13 @@ function Ale(props){
 }
 
 Ale.propTypes = {
-  name: PropTypes.string,
-  type: PropTypes.string,
-  process: PropTypes.string,
-  serving_size: PropTypes.string,
-  cost: PropTypes.string,
-  alcohol_content: PropTypes.string,
-  quote: PropTypes.string
+  name: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  process: PropTypes.string.isRequired,
+  serving_size: PropTypes.string.isRequired,
+  cost: PropTypes.string.isRequired,
+  alcohol_content: PropTypes.string.isRequired,
+  quote: PropTypes.string.isRequired
 };
 
 

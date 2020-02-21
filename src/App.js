@@ -22,26 +22,25 @@ class App extends React.Component {
 
   handleAddingNewAleToList(newAle) {
     let newMasterAleList = this.state.masterAleList.slice();
-    newAle.formattedSinceBirth = (newAle.sinceBirth).fromNow(true);
-
     newMasterAleList.push(newAle);
     this.setState({masterAleList: newMasterAleList});
+    console.log(this.masterAleList);
   }
-
-  componentDidMount() {
-    this.sinceBirthUpdateTimer = setInterval(() => this.updateBirthElapsedTime(), 1000);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.sinceBirthUpdateTimer);
-  }
-
-  // updateHealthByAging() {
-  //   console.log('hi');
+  //
+  // componentDidMount() {
+  //   this.sinceBirthUpdateTimer = setInterval(() => this.updateBirthElapsedTime(), 1000);
   // }
-  updateBirthElapsedTime() {
-    console.log('yo');
-  }
+  //
+  // componentWillUnmount() {
+  //   clearInterval(this.sinceBirthUpdateTimer);
+  // }
+  //
+  // // updateHealthByAging() {
+  // //   console.log('hi');
+  // // }
+  // updateBirthElapsedTime() {
+  //   console.log('yo');
+  // }
 
   render() {
   const routeStyles = {
@@ -62,7 +61,7 @@ class App extends React.Component {
     </header>
     <div>
     <Switch>
-      <Route exact path='/' render={() =>< AleList aleList = {this.state.masterAleList} />}/>
+      <Route exact path='/' render={() =>< AleList aleTotal = {this.state.masterAleList} />}/>
       <Route path='/aleadd' render={()=><NewAleControl onNewAleCreation={this.handleAddingNewAleToList} />} />
       <Route component={Error404} />
     </Switch>

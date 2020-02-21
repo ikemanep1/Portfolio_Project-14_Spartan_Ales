@@ -82,7 +82,7 @@ function AleAdd(props) {
 }
 
 AleAdd.propTypes = {
-  onAleCreation: PropTypes.func
+  onNewAleCreation: PropTypes.func
 };
 
 export default AleAdd;
