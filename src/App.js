@@ -23,46 +23,51 @@ class App extends React.Component {
         name: "Frozen Gladius",
         type: "Beer",
         process: "Undistilled",
-        serving_size: "12 oz",
+        size: "12 oz",
         cost: "$7.50",
-        alcohol_content: "5 proof",
-        quote: "Brewed in the peaks of mount Othrys, this pale lager is perfect for hot summer days."
+        content: "5 proof",
+        quote: "Brewed in the peaks of mount Othrys, this pale lager is perfect for hot summer days.",
+        keg: 100
       },
       {
         name: "Moraitis Chenin blanc",
         type: "Wine",
         process: "Undistilled",
-        serving_size: "5 oz",
+        size: "5 oz",
         cost: "$9.00",
-        alcohol_content: "11 proof",
-        quote: "Vinified at the legendary Moraitis Winery in Greece, this luxurious wine represents the very essence of satisfaction."
+        content: "11 proof",
+        quote: "Vinified at the legendary Moraitis Winery in Greece, this luxurious wine represents the very essence of satisfaction.",
+        keg: 100
       },
       {
         name: "Cyclops in a Cup",
         type: "Cocktail (Arrack base, with some surprises)",
         process: "Distilled",
-        serving_size: "9 oz",
+        size: "9 oz",
         cost: "$11.50",
-        alcohol_content: "42 proof",
-        quote: "Somewhat vindictively named, this angry brew is akin to drinking a punch in the face."
+        content: "42 proof",
+        quote: "Somewhat vindictively named, this angry brew is akin to drinking a punch in the face.",
+        keg: 100
       },
       {
         name: "Aegean Everclear",
         type: "Spirit",
         process: "Distilled",
-        serving_size: "5 oz",
+        size: "5 oz",
         cost: "$8.50",
-        alcohol_content: "120 proof",
-        quote: "Strong enough to send Poseidon himself into a stupor, you'll probably be wasted on the first swig."
+        content: "120 proof",
+        quote: "Strong enough to send Poseidon himself into a stupor, you'll probably be wasted on the first swig.",
+        keg: 100
       },
       {
         name: "Kraken's lament",
         type: "Literally pure alcohol",
         process: "distilled",
-        serving_size: "12 oz",
+        size: "12 oz",
         cost: "$6.50",
-        alcohol_content: "200 proof",
-        quote: "Used primarily for treating wounds in battle, to even stand after downing this sickly brew is to withstand the fury of the gods themselves."
+        content: "200 proof",
+        quote: "Used primarily for treating wounds in battle, to even stand after downing this sickly brew is to withstand the fury of the gods themselves.",
+        keg: 100
       }],
       masterReviewList: [{
          name: "Clarissa",

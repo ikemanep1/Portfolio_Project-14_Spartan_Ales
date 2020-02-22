@@ -37,7 +37,8 @@ Ale.propTypes = {
   serving_size: PropTypes.string.isRequired,
   cost: PropTypes.string.isRequired,
   alcohol_content: PropTypes.string.isRequired,
-  quote: PropTypes.string.isRequired
+  quote: PropTypes.string.isRequired,
+  keg: PropTypes.number.isRequired
 };
 
 

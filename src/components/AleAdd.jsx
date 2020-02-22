@@ -11,12 +11,12 @@ function AleAdd(props) {
   let _cost = null;
   let _content = null;
   let _quote = null;
-  let _keg = 100;
+  let _keg = null;
 
 
   function handleNewAleSubmission(event) {
     event.preventDefault();
-    props.onNewAleCreation({name: _name.value, type: _type.value, process: _process.value, size: _size.value, cost: _cost.value, content: _content.value, quote: _quote.value, id: v4()});
+    props.onNewAleCreation({name: _name.value, type: _type.value, process: _process.value, size: _size.value, cost: _cost.value, content: _content.value, quote: _quote.value, keg: _keg.value, id: v4()});
     _name.value = '';
     _type.value = '';
     _process.value = '';
@@ -24,6 +24,7 @@ function AleAdd(props) {
     _cost.value = '';
     _content.value = '';
     _quote.value = '';
+    _keg.value = '';
   }
   const aleFormStyles = {
     width: "60%",
@@ -76,6 +77,11 @@ function AleAdd(props) {
     id='quote'
     placeholder='Beverage Description'
     ref={(input) => {_quote = input;}}/>
+    <input
+    type='text'
+    id='keg'
+    placeholder='Total Units'
+    ref={(input) => {_keg = input;}}/>
     <button type='submit'>Submit!</button>
       </form>
     </div>
