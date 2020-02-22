@@ -11,7 +11,7 @@ function ReviewAdd(props) {
 
   function handleNewReviewSubmission(event) {
     event.preventDefault();
-    props.onReviewCreation({name: _name.value, rating: _rating.value, content: _content.value, id: v4()});
+    props.onNewReviewCreation({name: _name.value, rating: _rating.value, content: _content.value, id: v4()});
     _name.value = '';
     _rating.value = '';
     _content.value = '';
