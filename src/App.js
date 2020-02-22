@@ -10,6 +10,7 @@ import NewAleControl from './components/NewAleControl';
 import NewReviewControl from './components/NewReviewControl';
 import Error404 from './components/Error404';
 import {Switch, Route} from 'react-router-dom';
+import {Button} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Moment from 'moment';
 import {Link} from "react-router-dom";
@@ -116,7 +117,11 @@ class App extends React.Component {
     newMasterAleList.forEach((ale) => ale.keg += 1);
     this.setState({masterAleList: newMasterAleList});
   }
-
+  purchase() {
+    let newMasterAleList = this.state.masterAleList.slice();
+    newMasterAleList.forEach((ale) => ale.keg -= 20);
+    this.setState({masterAleList: newMasterAleList});
+  }
   render() {
   const routeStyles = {
     width: "80%",
@@ -143,6 +148,7 @@ class App extends React.Component {
       <Route component={Error404} />
     </Switch>
     </div>
+    <Button onClick={() => this.purchase()} variant="danger">Buy our collection!</Button>
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import Ale from "./Ale";
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import {Button} from 'react-bootstrap';
 
 function AleList(props){
   const aleIntro = {
