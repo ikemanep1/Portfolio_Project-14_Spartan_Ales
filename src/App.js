@@ -114,30 +114,20 @@ class App extends React.Component {
 
   updateBirthElapsedTime() {
     let newMasterAleList = this.state.masterAleList.slice();
-    newMasterAleList.forEach((ale) => ale.keg += 1);
+    newMasterAleList.forEach((ale) => ale.keg += 10);
     this.setState({masterAleList: newMasterAleList});
   }
   purchase() {
     let newMasterAleList = this.state.masterAleList.slice();
-    newMasterAleList.forEach((ale) => ale.keg -= 20);
+    newMasterAleList.forEach((ale) => ale.keg -= 200);
     this.setState({masterAleList: newMasterAleList});
   }
   render() {
-  const routeStyles = {
-    width: "80%",
-    backgroundColor: "#660000",
-    padding: "20px",
-    display: "flex",
-    justifyContent: "center",
-    marginTop: "20px",
-    marginLeft: "10%",
-    border: "3px solid #ff751a",
-    textAlign: "center",
-    color: "#ffedcc",
-  }
-  return (<div style={routeStyles} className="App">
+  return (
+    <div className="App">
     <header className="App-header">
     <Nav/>
+    <Button onClick={() => this.purchase()} variant="danger">Buy our collection!</Button>
     </header>
     <div>
     <Switch>
@@ -148,7 +138,6 @@ class App extends React.Component {
       <Route component={Error404} />
     </Switch>
     </div>
-    <Button onClick={() => this.purchase()} variant="danger">Buy our collection!</Button>
     </div>
   );
 }
