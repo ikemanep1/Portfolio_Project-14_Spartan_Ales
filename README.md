@@ -20,9 +20,9 @@ _This is a simple REACT application with routing._
 
 # specs
 
-_Right now, there isn't any back end logic. It's just as pretty as it can be._
+_The logic incorporates state functionality, inverse data flow, and unidirectional data flow to dynamically update pages as the DOM is manipulated. Forms take input, buttons affect what is visible, and functions fire at specific intervals_
 
-_![Image description](./public/component_visual.jpg)_
+_![Image description](./public/visual.png)_
 
 ### Support and contact details
 
