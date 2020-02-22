@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Button} from 'react-bootstrap';
 
 function ConfirmationAdd(props){
   const confirm = {
@@ -14,10 +15,19 @@ function ConfirmationAdd(props){
     border: "3px solid #ff751a",
     color: "#ffedcc",
   }
+  const navButtons = {
+    marginLeft: "10px",
+    marginRight: "20px",
+    border: "3px solid #ff751a",
+    color: "white",
+    backgroundColor: "#cc0000",
+    padding: "5px;",
+    textDecoration: 'none'
+  }
   return (
     <div style={confirm}>
       <p>Are you sure about adding this?</p>
-      <button onClick={props.onAddConfirmation}>Yes</button>
+      <Button style={navButtons} onClick={props.onAddConfirmation}>Yes</Button>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import {Button} from 'react-bootstrap';
 import { v4 } from 'uuid';
 
 function ReviewAdd(props) {
@@ -28,6 +29,15 @@ function ReviewAdd(props) {
     color: "#ffedcc",
     alignItems: "center"
   }
+  const navButtons = {
+    marginLeft: "10px",
+    marginRight: "20px",
+    border: "3px solid #ff751a",
+    color: "white",
+    backgroundColor: "#cc0000",
+    padding: "5px;",
+    textDecoration: 'none'
+  }
   return (
     <div style={reviewFormStyles}>
     <form onSubmit={handleNewReviewSubmission}>
@@ -46,7 +56,7 @@ function ReviewAdd(props) {
     id='content'
     placeholder='Content'
     ref={(input) => {_content = input;}}/>
-    <button type='submit'>Submit!</button>
+    <Button style={navButtons} type='submit'>Submit!</Button>
       </form>
     </div>
   );

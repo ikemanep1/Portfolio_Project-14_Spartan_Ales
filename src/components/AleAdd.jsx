@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import {Button} from 'react-bootstrap';
 import { v4 } from 'uuid';
 
 function AleAdd(props) {
@@ -38,6 +39,15 @@ function AleAdd(props) {
     border: "3px solid #ff751a",
     color: "#ffedcc",
     alignItems: "center"
+  }
+  const navButtons = {
+    marginLeft: "10px",
+    marginRight: "20px",
+    border: "3px solid #ff751a",
+    color: "white",
+    backgroundColor: "#cc0000",
+    padding: "5px;",
+    textDecoration: 'none'
   }
   return (
     <div style={aleFormStyles}>
@@ -82,7 +92,7 @@ function AleAdd(props) {
     id='keg'
     placeholder='Total Units'
     ref={(input) => {_keg = input;}}/>
-    <button type='submit'>Submit!</button>
+    <Button style={navButtons} type='submit'>Submit!</Button>
       </form>
     </div>
   );
