@@ -1,28 +1,15 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import {Button} from 'react-bootstrap';
 
 
 function Nav(){
-  const navStyles = {
-    width: "60%",
-    backgroundColor: "#4e504d",
-    padding: "20px",
-    display: "flex",
-    justifyContent: "center",
-    marginLeft: "20%",
-    marginRight: "20%",
-    marginTop: "20px",
-    border: "3px solid #ff751a",
-  }
-  const navSearchStyles = {
-    marginLeft: "50px",
-    height: "15px"
-  }
   const navButtons = {
-    height: "25px",
     marginLeft: "10px",
-    backgroundColor: "black",
-    color: "#ff8533",
+    marginRight: "20px",
+    border: "3px solid #ff751a",
+    color: "white",
+    backgroundColor: "#cc0000",
     padding: "5px;",
     textDecoration: 'none'
   }
@@ -31,15 +18,13 @@ function Nav(){
     color: "#ff8533",
   }
   return (
-    <div className="nav" style={navStyles}>
+    <div className="nav">
       <table className="nav-links">
-           <Link to="/" style={navButtons}>Home</Link>
-           <Link to="/aleadd" style={navButtons}>Add a drink!</Link>
-           <Link to="/reviewlist" style={navButtons}>About us!</Link>
+           <Link to="/"><Button style={navButtons}>Home</Button></Link>
+           <Link to="/aleadd"><Button style={navButtons}>Add Drink</Button></Link>
+           <Link to="/reviewlist"><Button style={navButtons}>Client Praise</Button></Link>
       </table>
       <a style={social} href='https://www.facebook.com/' target='_blank' rel='noopener noreferrer'><i style={social} className="fab fa-facebook"></i></a>
-      <input style={navSearchStyles} type='text' placeholder='Search' />
-      <button style={navButtons}>Go!</button>
     </div>
   );
 }

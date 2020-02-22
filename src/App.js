@@ -123,11 +123,29 @@ class App extends React.Component {
     this.setState({masterAleList: newMasterAleList});
   }
   render() {
+    const headerStyle = {
+      textAlign: "center",
+      width: "60%",
+      backgroundColor: "#4e504d",
+      padding: "20px",
+      display: "flex",
+      justifyContent: "center",
+      marginLeft: "20%",
+      marginRight: "20%",
+      marginTop: "20px",
+      border: "3px solid #ff751a",
+    }
+    const buttonStyle = {
+      border: "3px solid #ff751a",
+      color: "white",
+      backgroundColor: "#cc0000",
+      marginLeft: "10px"
+    }
   return (
     <div className="App">
-    <header className="App-header">
+    <header style={headerStyle} className="App-header">
     <Nav/>
-    <Button onClick={() => this.purchase()} variant="danger">Buy our collection!</Button>
+    <Button style={buttonStyle} onClick={() => this.purchase()}>Buy our collection!</Button>
     </header>
     <div>
     <Switch>
