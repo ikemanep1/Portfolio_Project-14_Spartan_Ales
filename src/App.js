@@ -103,6 +103,20 @@ class App extends React.Component {
     console.log(this.masterReviewList);
   }
 
+  componentDidMount() {
+    this.sinceBirthUpdateTimer = setInterval(() => this.updateBirthElapsedTime(), 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.sinceBirthUpdateTimer);
+  }
+
+  updateBirthElapsedTime() {
+    let newMasterAleList = this.state.masterAleList.slice();
+    newMasterAleList.forEach((ale) => ale.keg += 1);
+    this.setState({masterAleList: newMasterAleList});
+  }
+
   render() {
   const routeStyles = {
     width: "80%",
