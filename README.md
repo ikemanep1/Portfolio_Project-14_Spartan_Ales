@@ -22,7 +22,13 @@ _This is a simple REACT application with routing._
 
 _The logic incorporates state functionality, inverse data flow, and unidirectional data flow to dynamically update pages as the DOM is manipulated. Forms take input, buttons affect what is visible, and functions fire at specific intervals_
 
+_This visual shows all of the pages that involve state functionality. Class-based components are dark gray, while functional components are light gray. Pink links highlight connections between class-based components, while red links connect functional components._
+
 _![Image description](./public/visual.png)_
+
+_Only the control components, and the app itself are class-based components. The forms, singular pages, and list pages are functional components. The program will navigate to a confirmation page if a new ale or review is added, and will then navigate to a form page. Information submitted through these form pages will show up in the home page of the application._
+
+_Every second, stock will be added to each ale category. By clicking the "Buy our collection!" button, all stock values will decrease by one second._
 
 ### Support and contact details
 
