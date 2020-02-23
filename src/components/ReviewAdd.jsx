@@ -27,7 +27,8 @@ function ReviewAdd(props) {
     marginTop: "10px",
     border: "3px solid #ff751a",
     color: "#ffedcc",
-    alignItems: "center"
+    alignItems: "center",
+    display: "flex"
   }
   const navButtons = {
     marginLeft: "10px",
@@ -38,20 +39,23 @@ function ReviewAdd(props) {
     padding: "5px;",
     textDecoration: 'none'
   }
+  const inputStyles = {
+    margin: "10px"
+  }
   return (
     <div style={reviewFormStyles}>
     <form onSubmit={handleNewReviewSubmission}>
-    <input
+    <input style={inputStyles}
     type='text'
     id='name'
     placeholder='Name'
     ref={(input) => {_name = input;}}/>
-    <input
+    <input style={inputStyles}
     type='text'
     id='rating'
     placeholder='Rating'
     ref={(input) => {_rating = input;}}/>
-    <input
+    <input style={inputStyles}
     type='text'
     id='content'
     placeholder='Content'

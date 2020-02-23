@@ -108,9 +108,9 @@ class App extends React.Component {
     this.sinceBirthUpdateTimer = setInterval(() => this.updateBirthElapsedTime(), 1000);
   }
 
-  componentWillUnmount() {
-    clearInterval(this.sinceBirthUpdateTimer);
-  }
+  // componentWillUnmount() {
+  //   clearInterval(this.sinceBirthUpdateTimer);
+  // }
 
   updateBirthElapsedTime() {
     let newMasterAleList = this.state.masterAleList.slice();

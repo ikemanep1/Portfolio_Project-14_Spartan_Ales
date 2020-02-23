@@ -49,45 +49,48 @@ function AleAdd(props) {
     padding: "5px;",
     textDecoration: 'none'
   }
+  const inputStyles = {
+    margin: "10px"
+  }
   return (
     <div style={aleFormStyles}>
     <form onSubmit={handleNewAleSubmission}>
-    <input
+    <input style={inputStyles}
     type='text'
     id='name'
     placeholder='Beverage Name'
     ref={(input) => {_name = input;}}/>
-    <input
+    <input style={inputStyles}
     type='text'
     id='type'
     placeholder='Beverage Type'
     ref={(input) => {_type = input;}}/>
-    <input
+    <input style={inputStyles}
     type='text'
     id='process'
     placeholder='Beverage Process'
     ref={(input) => {_process = input;}}/>
-    <input
+    <input style={inputStyles}
     type='text'
     id='serving size'
     placeholder='Recommended Serving Size'
     ref={(input) => {_size = input;}}/>
-    <input
+    <input style={inputStyles}
     type='text'
     id='cost'
     placeholder='Beverage Cost'
     ref={(input) => {_cost = input;}}/>
-    <input
+    <input style={inputStyles}
     type='text'
     id='alcohol_content'
     placeholder='Beverage Alcohol Content'
     ref={(input) => {_content = input;}}/>
-    <input
+    <input style={inputStyles}
     type='text'
     id='quote'
     placeholder='Beverage Description'
     ref={(input) => {_quote = input;}}/>
-    <input
+    <input style={inputStyles}
     type='text'
     id='keg'
     placeholder='Total Units'
