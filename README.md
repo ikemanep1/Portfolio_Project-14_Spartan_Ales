@@ -1,7 +1,7 @@
 
 # _Spartan Ale!_
 
-### _A place buying Greek alcohol!_
+### _A place for buying Greek alcohol!_
 
 ### By _**Ike Esquivel-Pilloud**_
 
